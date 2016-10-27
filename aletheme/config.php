@@ -184,36 +184,18 @@ function aletheme_get_options() {
 						"id" => "ale_fb",
 						"std" => "",
 						"type" => "text");
-    $options[] = array( "name" => "Google+",
-                        "desc" => "Your google+ profile URL.",
-                        "id" => "ale_gog",
-                        "std" => "",
-                        "type" => "text");
-    $options[] = array( "name" => "Pinterest",
-                        "desc" => "Your pinteres profile URL.",
-                        "id" => "ale_pint",
-                        "std" => "",
-                        "type" => "text");
-    $options[] = array( "name" => "Flickr",
-                        "desc" => "Your flickr profile URL.",
-                        "id" => "ale_flickr",
-                        "std" => "",
-                        "type" => "text");
-    $options[] = array( "name" => "Linkedin",
-                        "desc" => "Your linked profile URL.",
-                        "id" => "ale_linked",
-                        "std" => "",
-                        "type" => "text");
     $options[] = array( "name" => "Instagram",
                         "desc" => "Your instagram profile URL.",
                         "id" => "ale_insta",
                         "std" => "",
                         "type" => "text");
-    $options[] = array( "name" => "Email",
-                        "desc" => "Your email",
-                        "id" => "ale_emailcont",
+
+    $options[] = array( "name" => "Youtube",
+                        "desc" => "Your Youtube link",
+                        "id" => "ale_yt",
                         "std" => "",
                         "type" => "text");
+
     $options[] = array( "name" => "Show RSS",
                         "desc" => "Check if you want to show the RSS icon on your site",
                         "id" => "ale_rssicon",

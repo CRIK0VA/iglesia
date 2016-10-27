@@ -11,7 +11,7 @@ class Aletheme_Flickr_Widget extends WP_Widget
 		/* Widget control settings. */
 		$control_ops = array( 'width' => 500);
 		/* Create the widget. */
-		$this->WP_Widget( 'Aletheme_Flickr_Widget-widget', 'Aletheme Flickr', $widget_ops, $control_ops);
+		parent::__construct( 'Aletheme_Flickr_Widget-widget', 'Aletheme Flickr', $widget_ops, $control_ops);
 		
 		$this->cache_key = 'alethemeflickrcache';
 	}

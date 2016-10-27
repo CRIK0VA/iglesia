@@ -1,0 +1,79 @@
+.nobreak {
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  -o-column-break-inside: avoid;
+  -ms-column-break-inside: avoid;
+  display: table;
+}
+/* Your Custom code here */
+.wrapper {
+  width: 96%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+/*
+Header Styles
+*/
+.top_header {
+  height: 105px;
+  background: #FFFFFF;
+  position: relative;
+}
+.top_header::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: url(img/bottom.png) repeat-x center center;
+  position: absolute;
+  top: 100%;
+}
+.top_header .header_third {
+  width: 33.3%;
+  float: left;
+}
+.top_header .header_third.logo_section {
+  text-align: center;
+  line-height: 105px;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.top_header .header_third.logo_section:hover {
+  -moz-opacity: 0.6;
+  -khtml-opacity: 0.6;
+  -webkit-opacity: 0.6;
+  opacity: 0.6;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.top_header .header_third.social_section {
+  text-align: right;
+  font-size: 20px;
+  color: #d4dad9;
+  line-height: 105px;
+}
+.top_header .header_third.social_section a {
+  color: inherit;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.top_header .header_third.social_section a:hover {
+  color: #959b9a;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.top_header .header_third.social_section i {
+  margin-left: 30px;
+}

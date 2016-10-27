@@ -1,7 +1,70 @@
 @import 'elements.less';
 
+
+@color_grey: #d4dad9;
+@color_darkgrey: #959b9a;
+
 /* Your Custom code here */
 
-div.example{
-  color:#fff;
+.wrapper {
+  width:96%;
+  max-width:960px;
+  margin: 0 auto;
+}
+
+
+/*
+Header Styles
+*/
+.top_header {
+  height: 105px;
+  background: #FFFFFF;
+  position: relative;
+
+  &::after {
+    content:"";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: url(img/bottom.png) repeat-x center center;
+    position: absolute;
+    top:100%;
+  }
+
+  .header_third {
+    width: 33.3%;
+    float:left;
+
+    &.logo_section {
+      text-align: center;
+      line-height: 105px;
+      .transition(all 300ms ease-in-out);
+
+      &:hover {
+        .opacity(0.6);
+        .transition(all 300ms ease-in-out);
+      }
+    }
+
+    &.social_section {
+      text-align: right;
+      font-size: 20px;
+      color:@color_grey;
+      line-height: 105px;
+
+      a {
+        color:inherit;
+        .transition(all 300ms ease-in-out);
+
+        &:hover {
+          color:@color_darkgrey;
+          .transition(all 300ms ease-in-out);
+        }
+      }
+
+      i {
+        margin-left: 30px;
+      }
+    }
+  }
 }

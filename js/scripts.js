@@ -15,6 +15,22 @@ jQuery(function($) {
         controlNav: false
     });
 
+
+
+    $('.menu_icon i.fa-bars').on('click',function(){
+        $('.menu_icon i.fa-bars').css('display','none');
+        $('.menu_icon i.fa-times').css('display','inline-block');
+
+        $('.top_navigation').css('display','block');
+    });
+
+    $('.menu_icon i.fa-times').on('click',function(){
+        $('.menu_icon i.fa-bars').css('display','inline-block');
+        $('.menu_icon i.fa-times').css('display','none');
+
+        $('.top_navigation').css('display','none');
+    });
+
 });
 
 Modernizr.addTest('ipad', function () {

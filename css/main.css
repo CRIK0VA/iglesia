@@ -19,6 +19,193 @@ Header Styles
   background: #FFFFFF;
   position: relative;
 }
+.top_header .top_navigation {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: #262626;
+  z-index: 99;
+}
+.top_header .top_navigation .wrapper {
+  position: relative;
+}
+.top_header .top_navigation .wrapper::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  margin-left: 5px;
+  margin-top: -4px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 3.5px 4px 3.5px;
+  border-color: transparent transparent #262626 transparent;
+}
+.top_header .top_navigation .donate_button {
+  float: right;
+  display: block;
+  height: 90px;
+}
+.top_header .top_navigation .donate_button a {
+  height: 87px;
+  display: block;
+  color: #eedf9c;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 90px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #eedf9c;
+  font-weight: 600;
+}
+.top_header .top_navigation .ale_headermenu {
+  line-height: 90px;
+  display: inline-block;
+}
+.top_header .top_navigation .ale_headermenu li {
+  display: inline-block;
+  float: left;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 90px;
+  position: relative;
+  margin-right: 2px;
+}
+.top_header .top_navigation .ale_headermenu li:hover .sub-menu {
+  display: block;
+}
+.top_header .top_navigation .ale_headermenu li .sub-menu {
+  background-color: #FFF;
+  color: #959b9a;
+  width: 140px;
+  box-sizing: border-box;
+  border-top: 3px solid #eedf9c;
+  margin-top: -3px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  position: relative;
+  display: none;
+}
+.top_header .top_navigation .ale_headermenu li .sub-menu::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  margin-top: -7px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 3.5px 4px 3.5px;
+  border-color: transparent transparent #eedf9c transparent;
+}
+.top_header .top_navigation .ale_headermenu li .sub-menu li {
+  color: #959b9a;
+  font-size: 13px;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  float: none;
+  width: 100%;
+  margin: 0;
+}
+.top_header .top_navigation .ale_headermenu li .sub-menu li.menu-item-has-children::after {
+  content: "\f054";
+  font: normal normal normal 6px/1 FontAwesome;
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  margin-top: -3px;
+  color: #eedf9c;
+}
+.top_header .top_navigation .ale_headermenu li .sub-menu li:hover .sub-menu {
+  display: block;
+}
+.top_header .top_navigation .ale_headermenu li .sub-menu li .sub-menu {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  border: 0;
+  border-left: 2px solid #f7f7f7;
+  display: none;
+}
+.top_header .top_navigation .ale_headermenu li .sub-menu li .sub-menu::before {
+  display: none;
+}
+.top_header .top_navigation .ale_headermenu li .sub-menu li:last-child a {
+  border-bottom: 0;
+}
+.top_header .top_navigation .ale_headermenu li .sub-menu li a {
+  color: inherit;
+  height: auto;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding: 0;
+  display: block;
+  line-height: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #d4dad9;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.top_header .top_navigation .ale_headermenu li .sub-menu li a:hover {
+  color: #804258;
+  text-decoration: underline;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.top_header .top_navigation .ale_headermenu li.current_page_item a,
+.top_header .top_navigation .ale_headermenu li.current-menu-item a {
+  color: #eedf9c;
+}
+.top_header .top_navigation .ale_headermenu li::after {
+  content: "\f111";
+  font: normal normal normal 4px/1 FontAwesome;
+  color: rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  float: left;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-top: -2px;
+}
+.top_header .top_navigation .ale_headermenu li:first-child a {
+  padding-left: 0;
+}
+.top_header .top_navigation .ale_headermenu li:last-child::after {
+  display: none;
+}
+.top_header .top_navigation .ale_headermenu li a {
+  color: inherit;
+  padding: 0 30px 0 30px;
+  display: block;
+  height: 100%;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.top_header .top_navigation .ale_headermenu li a:hover {
+  color: #eedf9c;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
 .top_header::after {
   content: "";
   display: block;
@@ -31,6 +218,64 @@ Header Styles
 .top_header .header_third {
   width: 33.3%;
   float: left;
+}
+.top_header .header_third.search_section {
+  line-height: 105px;
+}
+.top_header .header_third.search_section .menu_icon {
+  display: inline-block;
+  float: left;
+  line-height: 110px;
+}
+.top_header .header_third.search_section .menu_icon i {
+  font-size: 20px;
+  color: #262626;
+  cursor: pointer;
+}
+.top_header .header_third.search_section .search_box {
+  display: inline-block;
+  float: left;
+  margin-left: 30px;
+}
+.top_header .header_third.search_section .search_box #searchform fieldset::before {
+  content: "\f002";
+  font: normal normal normal 12px/1 FontAwesome;
+  display: inline-block;
+  color: #d4dad9;
+  margin-right: 6px;
+}
+.top_header .header_third.search_section .search_box #searchsubmit {
+  display: none;
+}
+.top_header .header_third.search_section .search_box input.searchinput {
+  border: none;
+  color: #959b9a;
+  font-size: 12px;
+  font-style: italic;
+}
+.top_header .header_third.search_section .search_box input.searchinput::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #d4dad9;
+  font-size: 12px;
+  font-style: italic;
+}
+.top_header .header_third.search_section .search_box input.searchinput::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #d4dad9;
+  font-size: 12px;
+  font-style: italic;
+}
+.top_header .header_third.search_section .search_box input.searchinput:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #d4dad9;
+  font-size: 12px;
+  font-style: italic;
+}
+.top_header .header_third.search_section .search_box input.searchinput:-moz-placeholder {
+  /* Firefox 18- */
+  color: #d4dad9;
+  font-size: 12px;
+  font-style: italic;
 }
 .top_header .header_third.logo_section {
   text-align: center;

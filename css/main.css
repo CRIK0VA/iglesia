@@ -19,6 +19,9 @@ Header Styles
   background: #FFFFFF;
   position: relative;
 }
+.top_header .wrapper {
+  overflow: hidden;
+}
 .top_header .top_navigation {
   display: none;
   position: absolute;
@@ -214,6 +217,7 @@ Header Styles
   background: url(img/bottom.png) repeat-x center center;
   position: absolute;
   top: 100%;
+  z-index: 1;
 }
 .top_header .header_third {
   width: 33.3%;
@@ -321,4 +325,123 @@ Header Styles
 }
 .top_header .header_third.social_section i {
   margin-left: 30px;
+}
+.home_slider .flexslider {
+  width: 50%;
+  float: left;
+  position: relative;
+}
+.home_slider .flexslider .flex-prev {
+  display: block;
+  position: absolute;
+  left: 100%;
+  top: 100%;
+  margin-left: -40px;
+  margin-top: -40px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 28px;
+  line-height: 40px;
+}
+.home_slider .flexslider .flex-next {
+  display: block;
+  position: absolute;
+  left: 100%;
+  top: 100%;
+  margin-top: -40px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 28px;
+  line-height: 40px;
+}
+.home_slider ul.slides li {
+  display: block;
+  width: 100%;
+}
+.home_slider ul.slides li figure {
+  position: relative;
+}
+.home_slider ul.slides li figure figcaption {
+  background-color: rgba(128, 66, 88, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 600ms ease-in-out;
+  -moz-transition: all 600ms ease-in-out;
+  -ms-transition: all 600ms ease-in-out;
+  -o-transition: all 600ms ease-in-out;
+  transition: all 600ms ease-in-out;
+  text-align: left;
+}
+.home_slider ul.slides li figure figcaption .mainslidertitle {
+  display: block;
+  padding-top: 80px;
+  padding-left: 80px;
+  font-size: 14px;
+  color: #FFFFFF;
+  font-family: "Playfair Display";
+}
+.home_slider ul.slides li figure figcaption .mainsliderdesc {
+  display: block;
+  padding-left: 80px;
+  padding-right: 20%;
+  font-size: 54px;
+  color: #FFFFFF;
+  font-family: "Playfair Display";
+}
+.home_slider ul.slides li figure figcaption .sliderlinkmore {
+  background-color: #ffefa7;
+  color: #804258;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  line-height: 40px;
+  width: 100px;
+  height: 40px;
+  display: block;
+  margin-left: 80px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  margin-top: 5px;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.home_slider ul.slides li figure figcaption .sliderlinkmore:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.home_slider ul.slides li.flex-active-slide figure figcaption {
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  -webkit-opacity: 0;
+  opacity: 0;
+  -webkit-transition: all 600ms ease-in-out;
+  -moz-transition: all 600ms ease-in-out;
+  -ms-transition: all 600ms ease-in-out;
+  -o-transition: all 600ms ease-in-out;
+  transition: all 600ms ease-in-out;
+}
+.home_slider ul.slides li img {
+  max-width: 100%;
+  height: auto;
 }

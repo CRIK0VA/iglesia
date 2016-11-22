@@ -358,6 +358,7 @@ Header Styles
 }
 
 .home_slider {
+  overflow-x: hidden;
 
   .flexslider {
     width: 50%;
@@ -469,6 +470,145 @@ Header Styles
       img {
         max-width: 100%;
         height: auto;
+      }
+    }
+  }
+}
+
+
+
+/*
+Footer Styles
+*/
+
+footer.main-footer {
+  min-height: 470px;
+  background: #FFF url(img/footer.png) bottom center no-repeat;
+
+  .top_footer {
+    min-height: 350px;
+
+    .footer_inner {
+      margin-top: 75px;
+      float: left;
+
+      &.contact,&.menu_info,&.footer_logo {
+        width: 22.2%;
+      }
+
+      &.twitter {
+        width: 33.3%;
+      }
+
+      &.contact {
+        font-family: Arial, Helvetica, sans-serif;
+        h5 {
+          font-size: 18px;
+          color:#000;
+          text-transform: none;
+          margin: 10px 0 20px 0;
+        }
+        color:#b4b4b4;
+        .footer_address {
+          font-size:12px;
+          margin-bottom: 10px;
+        }
+        .footer_phone {
+          font-size:18px;
+          margin-bottom: 10px;
+        }
+        .footer_email {
+          font-size:11px;
+
+          a {
+            color:inherit;
+          }
+        }
+
+      }
+
+
+      &.menu_info {
+        font-family: Arial, Helvetica, sans-serif;
+        h5 {
+          font-size: 18px;
+          color:#000;
+          text-transform: none;
+          margin: 10px 0 20px 0;
+        }
+        ul.footermenu {
+          color:#b4b4b4;
+          font-size: 11px;
+          line-height: 24px;
+
+          a {
+            color:inherit;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bottom_footer {
+    min-height: 120px;
+    line-height: 120px;
+    position: relative;
+
+    &::before{
+      content:"";
+      width: 37%;
+      display: block;
+      height: 1px;
+      border-top:1px solid #f2f2f2;
+      position: absolute;
+      top:0;
+      left:0;
+    }
+
+    &::after{
+      content:"";
+      width: 37%;
+      display: block;
+      height: 1px;
+      border-top:1px solid #f2f2f2;
+      position: absolute;
+      top:0;
+      right:0;
+    }
+
+    .copyrights {
+      float: left;
+      width: 35%;
+      color:#d4dad9;
+      font-size: 11px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+    .footer_social {
+      float: right;
+      width: 35%;
+      text-align: right;
+
+      font-size: 20px;
+      color:@color_grey;
+      line-height: 105px;
+
+      a {
+        color:inherit;
+        .transition(all 300ms ease-in-out);
+
+        &:hover {
+          color:@color_darkgrey;
+          .transition(all 300ms ease-in-out);
+        }
+      }
+
+      i {
+        margin-left: 30px;
       }
     }
   }

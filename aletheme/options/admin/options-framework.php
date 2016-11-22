@@ -258,6 +258,14 @@ function optionsframework_validate( $input ) {
 				}
 			}
 
+			if($option['type'] == 'images'){
+				$input[$id] = $option['desc'];
+			}
+
+			if($option['type'] == 'info'){
+				$input[$id] = $option['desc'];
+			}
+
 			// For a value to be submitted to database it must pass through a sanitization filter
 			if ( has_filter( 'of_sanitize_' . $option['type'] ) ) {
 				$clean[$id] = apply_filters( 'of_sanitize_' . $option['type'], $input[$id], $option );

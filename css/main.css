@@ -574,3 +574,74 @@ footer.main-footer .bottom_footer .footer_social a:hover {
 footer.main-footer .bottom_footer .footer_social i {
   margin-left: 30px;
 }
+.widget_latest_tweets_widget {
+  margin-left: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.widget_latest_tweets_widget .footer_widget_title {
+  font-size: 12px;
+  color: #b4b4b4;
+  text-transform: none;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+.widget_latest_tweets_widget .footer_widget_title::before {
+  display: inline-block;
+  font: normal normal normal 20px/1 FontAwesome;
+  content: "\f099";
+  color: #5ad2ff;
+  margin-right: 7px;
+}
+.widget_latest_tweets_widget .latest-tweets {
+  font-size: 11px;
+  color: #b4b4b4;
+  line-height: 20px;
+  position: relative;
+}
+.widget_latest_tweets_widget .latest-tweets time {
+  font-size: 10px;
+}
+.widget_latest_tweets_widget .latest-tweets a {
+  color: inherit;
+}
+.widget_latest_tweets_widget .latest-tweets ul li {
+  margin-top: 30px;
+}
+.widget_latest_tweets_widget .latest-tweets .flex-control-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: -24px;
+}
+.widget_latest_tweets_widget .latest-tweets .flex-control-nav li {
+  display: inline-block;
+  font-size: 0;
+  margin: 5px;
+}
+.widget_latest_tweets_widget .latest-tweets .flex-control-nav li a {
+  width: 6px;
+  height: 6px;
+  display: block;
+}
+.widget_latest_tweets_widget .latest-tweets .flex-control-nav li a.flex-active::before {
+  color: #999999;
+}
+.widget_latest_tweets_widget .latest-tweets .flex-control-nav li a::before {
+  content: "\f111";
+  display: inline-block;
+  font: normal normal normal 6px/1 FontAwesome;
+  color: #e5e5e5;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.widget_latest_tweets_widget .latest-tweets .flex-control-nav li a::before:hover {
+  color: #999999;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}

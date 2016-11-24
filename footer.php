@@ -34,7 +34,7 @@
                     <?php } ?>
                 </div>
                 <div class="twitter footer_inner">
-                    To do latter
+                    <?php get_sidebar('footer'); ?>
                 </div>
             </div>
         </div>

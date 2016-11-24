@@ -1196,6 +1196,16 @@ if ( function_exists('register_sidebar') ) {
             'after_title' => '</p><div class="line"></div>',
         ));
 
+        register_sidebar(array(
+            'name' => 'Footer Sidebar',
+            'id' => 'footer-sidebar',
+            'description' => 'Appears as the footer sidebar on all pages',
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h5 class="footer_widget_title">',
+            'after_title' => '</h5>',
+        ));
+
 }
 
 //Support automatic-feed-links

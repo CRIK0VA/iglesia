@@ -2,6 +2,7 @@
 $ale_background = ale_get_option('background');
 $ale_headerfont = ale_get_option('headerfont');
 $ale_mainfont = ale_get_option('mainfont');
+$ale_thirdfont = ale_get_option('thirdfont');
 $ale_font = ale_get_option('bodystyle');
 $ale_h1 = ale_get_option('h1sty');
 $ale_h2 = ale_get_option('h2sty');
@@ -13,7 +14,8 @@ $ale_h6 = ale_get_option('h6sty');
 <?php
     if(ale_get_option('headerfontex')){ $headerfontex = ":".ale_get_option('headerfontex'); } else {$headerfontex =""; }
     if(ale_get_option('mainfontex')){ $mainfontex = ":".ale_get_option('mainfontex'); } else {$mainfontex = "";}
-    if(ale_get_option('headerfont')){ echo "<link href='http://fonts.googleapis.com/css?family=".ale_get_option('headerfont').$headerfontex."|".ale_get_option('mainfont').$mainfontex."' rel='stylesheet' type='text/css'>"; }
+    if(ale_get_option('thirdfontex')){ $thirdfontex = ":".ale_get_option('thirdfontex'); } else {$thirdfontex = "";}
+    if(ale_get_option('headerfont')){ echo "<link href='http://fonts.googleapis.com/css?family=".ale_get_option('headerfont').$headerfontex."|".ale_get_option('mainfont').$mainfontex."|".ale_get_option('thirdfont').$thirdfontex."' rel='stylesheet' type='text/css'>"; }
 ?>
 <style type='text/css'>
     body {
@@ -78,27 +80,15 @@ $ale_h6 = ale_get_option('h6sty');
         ?>
     }
 
-    /*Header Font*/
-    body, .blog-center-align .blog-filter-line .search input[type=search], .blog-center-align .blog-single .right-side ul a,
-    .blog-center-align .blog-single .right-side .location p.loc, .blog-center-align .blog-single .left-side .blog-comments #comment-form input,
-    .contacts-center .content .left .contacts, .contacts-center .content .left .info, .contacts-center .content .right input,
-    .contacts-center .content .right textarea, .contacts-center .content .contact-footer, .portfolio-center-align .portfolio-categories,
-    .portfolio-line .scrollable .img .portfolio-text, .portfolio-line .scrollable .img .portfolio-text .by, .portfolio-line .scrollable .img .portfolio-text .text,
-    .portfolio-single-title p {
+    .font_one {
+    <?php if($ale_headerfont){ $headerfontname =  str_replace ('+',' ',$ale_headerfont); echo "font-family:".$headerfontname.";"; } ?>
+    }
+    .font_two {
         <?php if($ale_mainfont){ $mainfontname =  str_replace ('+',' ',$ale_mainfont); echo "font-family:".$mainfontname.";"; } ?>
     }
-
-    /*Main Font*/
-    #background-slider section .section-content .caption, .blog-center-align .blog-item .item-content .caption,
-    .blog-center-align .blog-footer, .blog-center-align .blog-single .right-side p.caption, .blog-center-align .blog-single .left-side .caption,
-    .blog-center-align .blog-single .left-side .blog-comments .comments-header .left, .blog-center-align .blog-single .left-side .blog-comments #comment-form p,
-    .blog-center-align .blog-single .left-side .blog-comments .comment1 .content .time,
-    .blog-center-align .blog-single .left-side .blog-comments .comment2 .content .time,
-    .blog-center-align .blog-single .left-side .blog-comments .comment1 .content .name,
-    .blog-center-align .blog-single .left-side .blog-comments .comment2 .content .name,
-    .about-center-align .content-left .peoples li h2, .portfolio-line .scrollable .img .portfolio-text h2,
-    .portfolio-single-title h2, .menu-align .menu-click-drop, .menu-align .menu-click-drop ul.dropdown-menu, .menu-align .menu-click-drop ul.dropdown-menu li ul {
-        <?php if($ale_headerfont){ $headerfontname =  str_replace ('+',' ',$ale_headerfont); echo "font-family:".$headerfontname.";"; } ?>
+    .font_three {
+    <?php if($ale_thirdfont){ $thirdfontname =  str_replace ('+',' ',$ale_thirdfont); echo "font-family:".$thirdfontname.";"; } ?>
     }
+
 
 </style>

@@ -1,65 +1,60 @@
 <?php get_header(); ?>
-    <!-- Content -->
-    <div class="portfolio-center-align">
 
-        <div class="portfolio-categories">
-            <div class="nav">
-                <a href="<?php echo home_url(); ?>/gallery" class="active"><?php _e('All', 'aletheme')?></a>
-                <?php $args = array(
-                    'type'                     => 'gallery',
-                    'child_of'                 => 0,
-                    'parent'                   => '',
-                    'orderby'                  => 'name',
-                    'order'                    => 'ASC',
-                    'hide_empty'               => 1,
-                    'hierarchical'             => 1,
-                    'exclude'                  => '',
-                    'include'                  => '',
-                    'number'                   => '',
-                    'taxonomy'                 => 'gallery-category',
-                    'pad_counts'               => false );
+<div class="container contacts">
+    <div class="wrapper">
+        <h2 class="page_title"><?php _e('Gallery','aletheme') ?></h2>
+            <div class="page_content gallery-page cf">
+                    <?php
+                    $i = 0;
 
-                $categories = get_categories( $args );
-
-                foreach($categories as $cat){
-                    echo '<span>/</span><a href="'.home_url().'/gallery-category/'.$cat->slug.'">'.$cat->name.'</a>';
-                }
-                ?>
-            </div>
-        </div>
-
-
-        <div class="portfolio-line">
-
-            <div class="scrollable" id="scrollable">
-                <div class="items">
-                    <?php global $query_string; query_posts($query_string.'&posts_per_page=3');?>
-                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                    <!-- Item -->
-                    <div class="item">
-                        <div class="img">
+                    if (have_posts()) : while (have_posts()) : the_post(); ?>
+                        <div class="gallery-post">
                             <a href="<?php the_permalink(); ?>">
-                                <p><?php _e('open portfolio','aletheme'); ?></p>
-                                <span class="darken"></span>
-                                <span class="border"></span>
-                                <?php echo get_the_post_thumbnail($post->ID,'gallery-thumba') ?>
-                            </a>
-                            <div class="portfolio-text">
-                                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                                <p class="by">by <?php the_author(); ?></p>
-                                <div class="text">
-                                    <?php echo ale_trim_excerpt(15); ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <?php endwhile;  endif;  ?>
+                                <?php
+                                if($i == 2){
+                                    echo get_the_post_thumbnail($post->ID,'gallery-vertical');
+                                } else if($i == 7) {
+                                    echo get_the_post_thumbnail($post->ID,'gallery-bigkvadrat');
+                                } else {
+                                    echo get_the_post_thumbnail($post->ID,'gallery-kvadrat');
+                                }
 
+                                $i++; ?>
+
+                                <span class="mask">
+                                    <span class="arrow">
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                    <?php endwhile;  endif;  ?>
+            </div>
+            <?php global $wp_query;
+                if($wp_query->max_num_pages > 1) {
+            ?>
+            <div class="pagination">
+                <div class="left_arrow">
+                    <?php
+                    if(get_previous_posts_link()){
+                        echo get_previous_posts_link('<i class="fa fa-angle-left" aria-hidden="true"></i>');
+                    } else {
+                        echo '<i class="fa fa-angle-left" aria-hidden="true"></i>';
+                    } ?>
+                </div>
+                <div class="paginate_items">
+                    <?php ale_page_links(); ?>
+                </div>
+                <div class="right_arrow">
+                    <?php
+                    if(get_next_posts_link()){
+                        echo get_next_posts_link('<i class="fa fa-angle-right" aria-hidden="true"></i>');
+                    } else {
+                        echo '<i class="fa fa-angle-right" aria-hidden="true"></i>';
+                    } ?>
                 </div>
             </div>
-
-          <?php ale_page_links(); ?>
-
+            <?php } ?>
         </div>
     </div>
 <?php get_footer(); ?>

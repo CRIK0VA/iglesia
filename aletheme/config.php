@@ -285,6 +285,8 @@ function aletheme_get_options() {
                         "std" => "Select a category",
                         "type" => "text");
 
+
+
     $options[] = array( "name" => "Footer menu title",
                         "desc" => "Insert the footer menu title",
                         "id" => "ale_footermenutitle_1",
@@ -295,6 +297,21 @@ function aletheme_get_options() {
                             'image_2' => $imagepath.'/2cl.png',
                             'image_3' => $imagepath.'/2cr.png', ),
         );
+
+    $options[] = array( "name" => "Maps Settings",
+                        "type" => "heading");
+
+    $options[] = array( "name" => "Maps Icon",
+                        "desc" => "Upload or put the icon link",
+                        "id" => "ale_mapicon",
+                        "std" => "",
+                        "type" => "upload");
+
+    $options[] = array( "name" => "Map Style",
+                        "desc" => "Insert the map style from Snazzy Maps Service",
+                        "id" => "ale_mapstaly",
+                        "std" => "",
+                        "type" => "text");
 	
 	return $options;
 }
@@ -401,40 +418,24 @@ function aletheme_get_images_sizes() {
 
         'gallery' => array(
             array(
-                'name'      => 'gallery-thumba',
-                'width'     => 430,
-                'height'    => 267,
+                'name'      => 'gallery-kvadrat',
+                'width'     => 225,
+                'height'    => 225,
                 'crop'      => true,
             ),
             array(
-                'name'      => 'gallery-mini',
-                'width'     => 100,
-                'height'    => 67,
+                'name'      => 'gallery-vertical',
+                'width'     => 470,
+                'height'    => 225,
                 'crop'      => true,
             ),
             array(
-                'name'      => 'gallery-big',
-                'width'     => 680,
-                'height'    => 9999,
-                'crop'      => false,
-            ),
-        ),
-        'post' => array(
-            array(
-                'name'      => 'post-thumba',
-                'width'     => 475,
-                'height'    => 295,
-                'crop'      => true,
-            ),
-            array(
-                'name'      => 'post-minibox',
-                'width'     => 500,
-                'height'    => 200,
+                'name'      => 'gallery-bigkvadrat',
+                'width'     => 470,
+                'height'    => 470,
                 'crop'      => true,
             ),
         ),
-
-
     );
 }
 

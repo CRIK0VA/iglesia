@@ -1611,3 +1611,103 @@ footer.main-footer .bottom_footer .footer_social i {
   display: block;
   line-height: 32px;
 }
+/* Single Gallery Page */
+.single_gallery h2.post_title,
+.single_blog h2.post_title {
+  font-size: 46px;
+  font-style: normal;
+  text-transform: none;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.single_gallery .excerpt,
+.single_blog .excerpt {
+  color: #b3b3b3;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+.single_gallery .excerpt p,
+.single_blog .excerpt p {
+  color: inherit;
+  font-size: inherit;
+  line-height: 24px;
+  text-align: center;
+}
+.single_gallery .post_info,
+.single_blog .post_info {
+  font-size: 12px;
+  color: #000000;
+  margin-bottom: 40px;
+}
+.single_gallery .post_info .post_author,
+.single_blog .post_info .post_author,
+.single_gallery .post_info .post_date,
+.single_blog .post_info .post_date {
+  display: inline-block;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.single_gallery .post_info .post_author a,
+.single_blog .post_info .post_author a,
+.single_gallery .post_info .post_date a,
+.single_blog .post_info .post_date a {
+  color: inherit;
+}
+.single_gallery .post_info .post_author i,
+.single_blog .post_info .post_author i,
+.single_gallery .post_info .post_date i,
+.single_blog .post_info .post_date i {
+  color: #ffefa7;
+  font-size: 18px;
+  margin-right: 10px;
+}
+.single_gallery .portfolioslider,
+.single_blog .portfolioslider {
+  margin-bottom: 60px;
+  background: url(img/img_bg.gif);
+  padding-bottom: 10px;
+}
+.single_gallery .portfolioslider .flex-viewport,
+.single_blog .portfolioslider .flex-viewport {
+  margin-left: -10px;
+  margin-right: 10px;
+}
+.single_gallery .portfolioslider .flex-prev,
+.single_blog .portfolioslider .flex-prev {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  margin-left: -40px;
+  margin-top: -50px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 28px;
+  line-height: 40px;
+}
+.single_gallery .portfolioslider .flex-next,
+.single_blog .portfolioslider .flex-next {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  margin-top: -50px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 28px;
+  line-height: 40px;
+}
+.single_gallery .post_content,
+.single_blog .post_content {
+  margin: 0 170px;
+}
+.inner_wrapper {
+  margin: 0 120px;
+  text-align: center;
+}

@@ -1151,3 +1151,236 @@ footer.main-footer {
   margin: 0 120px;
   text-align: center;
 }
+
+/* Styles for Cooments */
+.comments-container {
+  margin-top:60px;
+  .comments_section_title {
+    color: @header_color;
+    font-size:44px;
+    text-align:center;
+    margin-bottom: 60px;
+  }
+  .comment {
+
+    .comment1 {
+      background: #ffffff;
+      border: 1px solid #f2f2f2;
+      box-sizing: border-box;
+      padding: 30px 50px;
+      margin-top: -1px;
+    }
+
+    .comment2 {
+      background: #fdfdfd;
+      border: 1px solid #f2f2f2;
+      box-sizing: border-box;
+      padding: 30px 50px;
+      margin-top: -1px;
+      margin-left: 60px;
+    }
+
+
+    .comment_data {
+      color:#a3a3a3;
+      font-size:12px;
+
+      p {
+        color:#a3a3a3;
+        font-size:12px;
+      }
+    }
+
+    .comment_info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+
+      .img {
+
+        img {
+          .rounded(100%);
+          overflow: hidden;
+          margin-right: 16px;
+        }
+      }
+      .info {
+        .name {
+          font-size:17px;
+          color:#000;
+        }
+        .time {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 10px;
+          color:#b3b3b3;
+
+        }
+        .comment-reply-link {
+          font-size:13px;
+          color:@header_color;
+          margin-left: 15px;
+          margin-right: 5px;
+
+        }
+        i {
+          font-size:12px;
+          color:@header_color;
+        }
+      }
+    }
+  }
+
+  .comment-form {
+    margin-top: 50px;
+  }
+}
+
+/* Add Comment Form */
+.add_comment_form {
+  margin-top:50px;
+
+  p.info {
+    text-align: center;
+
+    a {
+      color:@header_color;
+    }
+  }
+
+  .form_title {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    margin-bottom: 50px;
+
+    span {
+      &.left_line,&.right_line {
+        height: 1px;
+        background: #f2f2f2;
+        flex-grow: 1;
+      }
+
+    }
+
+
+    h4{
+      font-size:24px;
+      color:@header_color;
+      margin-bottom: 0;
+      text-align: center;
+      margin: 0 20px;
+    }
+  }
+
+  .form-item {
+    margin-bottom: 30px;
+    width: 100%;
+
+    input.submit {
+      background: @header_color;
+      color:#FFF;
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      .rounded(3px);
+      height: 48px;
+      line-height: 48px;
+      padding-left: 47px;
+      padding-right: 47px;
+    }
+
+
+    textarea.message {
+      border:2px solid #eeeeee;
+      padding: 20px;
+      .rounded(3px);
+      background: #FFF;
+      color:#d4dad9;
+      font-size: 12px;
+      font-family: arial, helvetica, sans-serif;
+      font-style: italic;
+      width: 100%;
+      box-sizing: border-box;
+      min-height: 150px;
+
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color:#d4dad9;
+        font-size: 12px;
+        font-family: arial, helvetica, sans-serif;
+        font-style: italic;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        color:#d4dad9;
+        font-size: 12px;
+        font-family: arial, helvetica, sans-serif;
+        font-style: italic;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        color:#d4dad9;
+        font-size: 12px;
+        font-family: arial, helvetica, sans-serif;
+        font-style: italic;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color:#d4dad9;
+        font-size: 12px;
+        font-family: arial, helvetica, sans-serif;
+        font-style: italic;
+      }
+    }
+
+    input[type="text"],input[type="email"],input[type="url"]{
+      border:2px solid #eeeeee;
+      .rounded(3px);
+      background: #FFF;
+      color:#d4dad9;
+      font-size: 12px;
+      font-family: arial, helvetica, sans-serif;
+      font-style: italic;
+      width: ~"calc(33.3333% - 20px)";
+      float:left;
+      box-sizing: border-box;
+      height: 48px;
+      line-height: 48px;
+      padding-left: 20px;
+
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color:#d4dad9;
+        font-size: 12px;
+        font-family: arial, helvetica, sans-serif;
+        font-style: italic;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        color:#d4dad9;
+        font-size: 12px;
+        font-family: arial, helvetica, sans-serif;
+        font-style: italic;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        color:#d4dad9;
+        font-size: 12px;
+        font-family: arial, helvetica, sans-serif;
+        font-style: italic;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color:#d4dad9;
+        font-size: 12px;
+        font-family: arial, helvetica, sans-serif;
+        font-style: italic;
+      }
+    }
+
+    input[type="text"] {
+      margin-right: 15px;
+    }
+    input[type="email"] {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    input[type="url"] {
+      margin-left: 15px;
+    }
+
+  }
+}

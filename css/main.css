@@ -1166,3 +1166,238 @@ footer.main-footer .bottom_footer .footer_social i {
   margin: 0 120px;
   text-align: center;
 }
+/* Styles for Cooments */
+.comments-container {
+  margin-top: 60px;
+}
+.comments-container .comments_section_title {
+  color: #7f4258;
+  font-size: 44px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.comments-container .comment .comment1 {
+  background: #ffffff;
+  border: 1px solid #f2f2f2;
+  box-sizing: border-box;
+  padding: 30px 50px;
+  margin-top: -1px;
+}
+.comments-container .comment .comment2 {
+  background: #fdfdfd;
+  border: 1px solid #f2f2f2;
+  box-sizing: border-box;
+  padding: 30px 50px;
+  margin-top: -1px;
+  margin-left: 60px;
+}
+.comments-container .comment .comment_data {
+  color: #a3a3a3;
+  font-size: 12px;
+}
+.comments-container .comment .comment_data p {
+  color: #a3a3a3;
+  font-size: 12px;
+}
+.comments-container .comment .comment_info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.comments-container .comment .comment_info .img img {
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  overflow: hidden;
+  margin-right: 16px;
+}
+.comments-container .comment .comment_info .info .name {
+  font-size: 17px;
+  color: #000;
+}
+.comments-container .comment .comment_info .info .time {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: #b3b3b3;
+}
+.comments-container .comment .comment_info .info .comment-reply-link {
+  font-size: 13px;
+  color: #7f4258;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+.comments-container .comment .comment_info .info i {
+  font-size: 12px;
+  color: #7f4258;
+}
+.comments-container .comment-form {
+  margin-top: 50px;
+}
+/* Add Comment Form */
+.add_comment_form {
+  margin-top: 50px;
+}
+.add_comment_form p.info {
+  text-align: center;
+}
+.add_comment_form p.info a {
+  color: #7f4258;
+}
+.add_comment_form .form_title {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  margin-bottom: 50px;
+}
+.add_comment_form .form_title span.left_line,
+.add_comment_form .form_title span.right_line {
+  height: 1px;
+  background: #f2f2f2;
+  flex-grow: 1;
+}
+.add_comment_form .form_title h4 {
+  font-size: 24px;
+  color: #7f4258;
+  margin-bottom: 0;
+  text-align: center;
+  margin: 0 20px;
+}
+.add_comment_form .form-item {
+  margin-bottom: 30px;
+  width: 100%;
+}
+.add_comment_form .form-item input.submit {
+  background: #7f4258;
+  color: #FFF;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  height: 48px;
+  line-height: 48px;
+  padding-left: 47px;
+  padding-right: 47px;
+}
+.add_comment_form .form-item textarea.message {
+  border: 2px solid #eeeeee;
+  padding: 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #FFF;
+  color: #d4dad9;
+  font-size: 12px;
+  font-family: arial, helvetica, sans-serif;
+  font-style: italic;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 150px;
+}
+.add_comment_form .form-item textarea.message::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #d4dad9;
+  font-size: 12px;
+  font-family: arial, helvetica, sans-serif;
+  font-style: italic;
+}
+.add_comment_form .form-item textarea.message::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #d4dad9;
+  font-size: 12px;
+  font-family: arial, helvetica, sans-serif;
+  font-style: italic;
+}
+.add_comment_form .form-item textarea.message:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #d4dad9;
+  font-size: 12px;
+  font-family: arial, helvetica, sans-serif;
+  font-style: italic;
+}
+.add_comment_form .form-item textarea.message:-moz-placeholder {
+  /* Firefox 18- */
+  color: #d4dad9;
+  font-size: 12px;
+  font-family: arial, helvetica, sans-serif;
+  font-style: italic;
+}
+.add_comment_form .form-item input[type="text"],
+.add_comment_form .form-item input[type="email"],
+.add_comment_form .form-item input[type="url"] {
+  border: 2px solid #eeeeee;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #FFF;
+  color: #d4dad9;
+  font-size: 12px;
+  font-family: arial, helvetica, sans-serif;
+  font-style: italic;
+  width: calc(33.3333% - 20px);
+  float: left;
+  box-sizing: border-box;
+  height: 48px;
+  line-height: 48px;
+  padding-left: 20px;
+}
+.add_comment_form .form-item input[type="text"]::-webkit-input-placeholder,
+.add_comment_form .form-item input[type="email"]::-webkit-input-placeholder,
+.add_comment_form .form-item input[type="url"]::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #d4dad9;
+  font-size: 12px;
+  font-family: arial, helvetica, sans-serif;
+  font-style: italic;
+}
+.add_comment_form .form-item input[type="text"]::-moz-placeholder,
+.add_comment_form .form-item input[type="email"]::-moz-placeholder,
+.add_comment_form .form-item input[type="url"]::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #d4dad9;
+  font-size: 12px;
+  font-family: arial, helvetica, sans-serif;
+  font-style: italic;
+}
+.add_comment_form .form-item input[type="text"]:-ms-input-placeholder,
+.add_comment_form .form-item input[type="email"]:-ms-input-placeholder,
+.add_comment_form .form-item input[type="url"]:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #d4dad9;
+  font-size: 12px;
+  font-family: arial, helvetica, sans-serif;
+  font-style: italic;
+}
+.add_comment_form .form-item input[type="text"]:-moz-placeholder,
+.add_comment_form .form-item input[type="email"]:-moz-placeholder,
+.add_comment_form .form-item input[type="url"]:-moz-placeholder {
+  /* Firefox 18- */
+  color: #d4dad9;
+  font-size: 12px;
+  font-family: arial, helvetica, sans-serif;
+  font-style: italic;
+}
+.add_comment_form .form-item input[type="text"] {
+  margin-right: 15px;
+}
+.add_comment_form .form-item input[type="email"] {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.add_comment_form .form-item input[type="url"] {
+  margin-left: 15px;
+}

@@ -371,11 +371,51 @@ hr {
 }
 .story blockquote,
 .content-right blockquote {
-  background: #f7f7f7;
-  border: 1px solid #e6e6e6;
-  padding: 20px;
+  padding: 50px;
+  text-align: center;
   line-height: 20px;
-  margin: 1em 0em;
+  margin: 5em 0 0 0;
+  font-size: 15px;
+  color: #7f4258;
+  font-style: italic;
+  position: relative;
+}
+.story blockquote::before,
+.content-right blockquote::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #f2f2f2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.story blockquote::after,
+.content-right blockquote::after {
+  content: "\f10d";
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 40px;
+  color: #e9e9e9;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -49px;
+  margin-top: -20px;
+  padding: 0 30px;
+  background: #FFF;
+}
+.story blockquote p,
+.content-right blockquote p {
+  text-align: center;
+}
+.story blockquote p:last-child,
+.content-right blockquote p:last-child {
+  margin-bottom: 0;
 }
 .story blockquote p:before,
 .content-right blockquote p:before {
@@ -999,6 +1039,10 @@ Footer Styles
 footer.main-footer {
   min-height: 470px;
   background: #FFF url(img/footer.png) bottom center no-repeat;
+}
+footer.main-footer.border-top-footer {
+  border-top: 1px solid #f2f2f2;
+  margin-top: 70px;
 }
 footer.main-footer .top_footer {
   min-height: 350px;
@@ -1763,6 +1807,25 @@ footer.main-footer .bottom_footer .footer_social i {
   font-size: 17px;
   color: #000;
 }
+.comments-container .comment .comment_info .info .name a {
+  color: inherit;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.comments-container .comment .comment_info .info .name a:hover {
+  -moz-opacity: 0.75;
+  -khtml-opacity: 0.75;
+  -webkit-opacity: 0.75;
+  opacity: 0.75;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
 .comments-container .comment .comment_info .info .time {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
@@ -1945,4 +2008,318 @@ footer.main-footer .bottom_footer .footer_social i {
 }
 .add_comment_form .form-item input[type="url"] {
   margin-left: 15px;
+}
+/* Events Styles */
+.ale_events_page .events_categories {
+  border-bottom: 1px solid #f2f2f2;
+  margin-bottom: 50px;
+}
+.ale_events_page .events_categories .event_category_link {
+  display: block;
+  padding-bottom: 30px;
+  margin-right: 25px;
+  margin-left: 25px;
+  padding-top: 5px;
+  color: #b3b3b3;
+  border-bottom: 2px solid transparent;
+  font-size: 11px;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.ale_events_page .events_categories .event_category_link:hover {
+  color: #838383;
+  border-bottom: 2px solid #ffefa7;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.ale_events_page .events_categories .taxlist ul {
+  text-align: center;
+}
+.ale_events_page .events_categories .taxlist ul li {
+  display: inline-block;
+}
+.ale_events_page .events_categories .taxlist ul li.active a {
+  color: #838383;
+  border-bottom: 2px solid #ffefa7;
+}
+.ale_events_page .events_list .item_event {
+  width: calc(33.3% - 20px);
+  margin: 0 10px;
+  float: left;
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #f2f2f2;
+}
+.ale_events_page .events_list .item_event .post_date {
+  color: #b3b3b3;
+  font-size: 10px;
+  font-family: arial, helvetica, sans-serif;
+}
+.ale_events_page .events_list .item_event h3 {
+  text-transform: none;
+  font-size: 13px;
+  color: #000000;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+.ale_events_page .events_list .item_event h3 a {
+  color: inherit;
+  -webkit-transition: all 100ms ease-in-out;
+  -moz-transition: all 100ms ease-in-out;
+  -ms-transition: all 100ms ease-in-out;
+  -o-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+}
+.ale_events_page .events_list .item_event h3 a:hover {
+  color: #7f4258;
+  text-decoration: underline;
+  -webkit-transition: all 100ms ease-in-out;
+  -moz-transition: all 100ms ease-in-out;
+  -ms-transition: all 100ms ease-in-out;
+  -o-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+}
+/*
+* About Styles
+*/
+.ale_about_page .content {
+  -webkit-column-count: 2;
+  /* Chrome, Safari, Opera */
+  -moz-column-count: 2;
+  /* Firefox */
+  column-count: 2;
+  -webkit-column-gap: 20px;
+  /* Chrome, Safari, Opera */
+  -moz-column-gap: 20px;
+  /* Firefox */
+  column-gap: 20px;
+  color: #a3a3a3;
+  font-size: 14px;
+  line-height: 24px;
+}
+.ale_about_page .content p {
+  text-align: justify;
+  color: #a3a3a3;
+  font-size: 14px;
+  line-height: 24px;
+}
+.ale_about_page .info_box {
+  margin: 80px 0;
+  padding: 80px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.ale_about_page .info_box .center_block {
+  max-width: 660px;
+  margin: 0 auto;
+  background: #7f4258;
+  box-sizing: border-box;
+  padding: 60px 100px 40px 100px;
+}
+.ale_about_page .info_box .center_block h3.info_title {
+  color: #ffefa7;
+  text-transform: none;
+  text-align: center;
+  font-size: 26px;
+  line-height: 32px;
+  margin-bottom: 25px;
+}
+.ale_about_page .info_box .center_block .description {
+  color: #FFF;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 35px;
+}
+.ale_about_page .info_box .center_block .divider {
+  width: 100%;
+  max-width: 130px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 auto;
+}
+.ale_about_page .services_items {
+  margin-bottom: 80px;
+}
+.ale_about_page .services_items .services_list {
+  display: flex;
+  justify-content: space-between;
+}
+.ale_about_page .services_items .services_list .serv_item {
+  width: calc(25% - 45px);
+}
+.ale_about_page .services_items .services_list .serv_item p {
+  color: #a3a3a3;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 24px;
+}
+.ale_about_page .services_items .services_list .serv_item .icon_box {
+  width: 100%;
+  height: 35px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.ale_about_page .our_people {
+  background: #5a1830;
+  position: relative;
+  z-index: 0;
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+.ale_about_page .our_people .peoples_list .item_people {
+  margin: 10px;
+  background: url(img/bottom.png);
+  position: relative;
+  min-height: 87px;
+}
+.ale_about_page .our_people .peoples_list .item_people .mask_hover {
+  background: #FFF;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.ale_about_page .our_people .peoples_list .item_people .mask_hover .people_info {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.ale_about_page .our_people .peoples_list .item_people .mask_hover .people_info h4.name {
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: none;
+  line-height: 14px;
+  margin-bottom: 10px;
+}
+.ale_about_page .our_people .peoples_list .item_people .mask_hover .people_info span.post {
+  font-size: 11px;
+  color: #b3b3b3;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 11px;
+  display: inline-block;
+}
+.ale_about_page .our_people .peoples_list .item_people:hover .mask_hover {
+  margin: -10px 0 0 -10px;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.ale_about_page .our_people .bg_people_mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -moz-opacity: 0.2;
+  -khtml-opacity: 0.2;
+  -webkit-opacity: 0.2;
+  opacity: 0.2;
+  z-index: -1;
+  background-size: cover;
+}
+.ale_about_page .our_people .top_titles {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+.ale_about_page .our_people .top_titles .left_arrow .left {
+  width: 45px;
+  height: 45px;
+  display: block;
+  border: 2px solid transparent;
+  text-align: center;
+  line-height: 45px;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 30px;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  cursor: pointer;
+}
+.ale_about_page .our_people .top_titles .left_arrow .left:hover {
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #FFF;
+}
+.ale_about_page .our_people .top_titles .center_info {
+  text-align: center;
+  margin-left: 38px;
+  margin-right: 38px;
+}
+.ale_about_page .our_people .top_titles .center_info h3.people_title {
+  color: #ffefa7;
+  font-size: 44px;
+  line-height: 44px;
+  text-transform: none;
+  margin-bottom: 20px;
+}
+.ale_about_page .our_people .top_titles .center_info .people_desc {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  line-height: 24px;
+}
+.ale_about_page .our_people .top_titles .right_arrow .right {
+  width: 45px;
+  height: 45px;
+  display: block;
+  border: 2px solid transparent;
+  text-align: center;
+  line-height: 45px;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 30px;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  cursor: pointer;
+}
+.ale_about_page .our_people .top_titles .right_arrow .right:hover {
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #FFF;
 }

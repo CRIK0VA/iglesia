@@ -83,7 +83,7 @@ $ale_h6 = ale_get_option('h6sty');
     .font_one {
     <?php if($ale_headerfont){ $headerfontname =  str_replace ('+',' ',$ale_headerfont); echo "font-family:".$headerfontname.";"; } ?>
     }
-    .font_two {
+    .font_two,.ale_about_page .our_people .top_titles .center_info h3.people_title {
         <?php if($ale_mainfont){ $mainfontname =  str_replace ('+',' ',$ale_mainfont); echo "font-family:".$mainfontname.";"; } ?>
     }
     .font_three {

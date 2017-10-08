@@ -1339,7 +1339,7 @@ function get_breadcrumbs() {
                 $post_type = get_post_type_object(get_post_type());
                 $slug = $post_type->rewrite;
                 printf($link, $home_link . '/' . $slug['slug'] . '/', $post_type->labels->singular_name);
-                if ($show_current == 1) echo $delimiter . $before . get_the_title() . $after;
+                if ($show_current == 1) echo $delimiter . $before . ale_truncate(get_the_title(),'70') . $after;
             } else {
                 $cat = get_the_category(); $cat = $cat[0];
                 $cats = get_category_parents($cat, TRUE, $delimiter);
@@ -1348,7 +1348,7 @@ function get_breadcrumbs() {
                 $cats = str_replace('</a>', '</a>' . $link_after, $cats);
                 if ($show_title == 0) $cats = preg_replace('/ title="(.*?)"/', '', $cats);
                 echo $cats;
-                if ($show_current == 1) echo $before . get_the_title() . $after;
+                if ($show_current == 1) echo $before . ale_truncate(get_the_title(),'70') . $after;
             }
 
         } elseif ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() ) {

@@ -1,106 +1,147 @@
 <?php
 /**
- * Template Name: Template About (team)
+ * Template Name: Template About
  */
 get_header(); ?>
-    <!-- Content -->
-    <div class="about-center-align">
+<div class="container ale_about_page">
 
-        <div class="content-left">
-            <?php if ( has_nav_menu( 'aboutpage_menu' ) ) {
-                wp_nav_menu(array(
-                    'theme_location'=> 'aboutpage_menu',
-                    'menu'			=> 'About Page Menu',
-                    'menu_class'	=> 'nav cf',
-                    'walker'		=> new Aletheme_Nav_Walker(),
-                    'container'		=> '',
-                ));
-            } ?>
+	<h2 class="page_title"><?php the_title(); ?></h2>
 
-            <ul class="peoples">
-                <?php if(ale_get_meta('memname1')){ ?>
-                    <li>
-                        <div style="background-image: url('<?php echo ale_get_meta('memava1'); ?>');" class="avatar"></div>
-                        <h2><a class="click"><?php echo ale_get_meta('memname1'); ?></a></h2>
-                        <p><?php echo ale_get_meta('memprof1'); ?></p>
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-                        <ul class="social">
-                            <?php if(ale_get_meta('memfb1')){ ?><li class="facebook"><a href="<?php echo ale_get_meta('memfb1'); ?>" ></a></li><?php } ?>
-                            <?php if(ale_get_meta('memtw1')){ ?><li class="twitter"><a href="<?php echo ale_get_meta('memtw1'); ?>" ></a></li><?php } ?>
-                            <?php if(ale_get_meta('memem1')){ ?><li class="mail"><a href="mainlto:<?php echo ale_get_meta('memem1'); ?>" ></a></li><?php } ?>
-                        </ul>
+		<div class="about_container">
 
-                        <div class="dynamic-text" style="display: none">
-                            <div class="h2"><?php _e('About','aletheme'); ?> <?php echo ale_get_meta('memname1'); ?></div>
-                            <?php ale_filtered_meta('memdesc1'); ?>
-                        </div>
-                    </li>
-                <?php } ?>
-                <?php if(ale_get_meta('memname2')){ ?>
-                    <li>
-                        <div style="background-image: url('<?php echo ale_get_meta('memava2'); ?>');" class="avatar"></div>
-                        <h2><a class="click"><?php echo ale_get_meta('memname2'); ?></a></h2>
-                        <p><?php echo ale_get_meta('memprof2'); ?></p>
+			<section class="content wrapper">
+				<?php the_content(); ?>
+			</section>
 
-                        <ul class="social">
-                            <?php if(ale_get_meta('memfb2')){ ?><li class="facebook"><a href="<?php echo ale_get_meta('memfb2'); ?>" ></a></li><?php } ?>
-                            <?php if(ale_get_meta('memtw2')){ ?><li class="twitter"><a href="<?php echo ale_get_meta('memtw2'); ?>" ></a></li><?php } ?>
-                            <?php if(ale_get_meta('memem2')){ ?><li class="mail"><a href="mainlto:<?php echo ale_get_meta('memem2'); ?>" ></a></li><?php } ?>
-                        </ul>
+			<?php if(ale_get_meta('info_display') == 'show'){ ?>
+				<section class="info_box" data-type="background" <?php if(ale_get_meta('info_bg')){ echo 'style="background-image:url('.ale_get_meta('info_bg').');"'; } ?>>
+					<div class="center_block">
+						<h3 class="info_title"><?php echo ale_get_meta('info_title'); ?></h3>
+						<span class="description"><?php echo ale_get_meta('info_text'); ?></span>
+						<div class="divider"></div>
+					</div>
+				</section>
+			<?php } ?>
 
-                        <div class="dynamic-text" style="display: none">
-                            <div class="h2"><?php _e('About','aletheme'); ?> <?php echo ale_get_meta('memname2'); ?></div>
-                            <?php ale_filtered_meta('memdesc2'); ?>
-                        </div>
-                    </li>
-                <?php } ?>
-                <?php if(ale_get_meta('memname3')){ ?>
-                    <li>
-                        <div style="background-image: url('<?php echo ale_get_meta('memava3'); ?>');" class="avatar"></div>
-                        <h2><a class="click"><?php echo ale_get_meta('memname3'); ?></a></h2>
-                        <p><?php echo ale_get_meta('memprof3'); ?></p>
+			<?php if(ale_get_meta('services_display') == 'show'){ ?>
+				<section class="services_items">
+					<div class="wrapper">
+						<div class="services_list">
+							<div class="serv_item">
+								<?php if(ale_get_meta('service_icon1')){ ?>
+									<div class="icon_box">
+										<img src="<?php echo ale_get_meta('service_icon1') ?>" alt=""/>
+									</div>
+								<?php } ?>
+								<?php if(ale_get_meta('service_text1')){ ?>
+									<p>
+										<?php echo ale_get_meta('service_text1') ?>
+									</p>
+								<?php } ?>
+							</div>
 
-                        <ul class="social">
-                            <?php if(ale_get_meta('memfb3')){ ?><li class="facebook"><a href="<?php echo ale_get_meta('memfb3'); ?>" ></a></li><?php } ?>
-                            <?php if(ale_get_meta('memtw3')){ ?><li class="twitter"><a href="<?php echo ale_get_meta('memtw3'); ?>" ></a></li><?php } ?>
-                            <?php if(ale_get_meta('memem3')){ ?><li class="mail"><a href="mainlto:<?php echo ale_get_meta('memem3'); ?>" ></a></li><?php } ?>
-                        </ul>
+							<div class="serv_item">
+								<?php if(ale_get_meta('service_icon2')){ ?>
+									<div class="icon_box">
+										<img src="<?php echo ale_get_meta('service_icon2') ?>" alt=""/>
+									</div>
+								<?php } ?>
+								<?php if(ale_get_meta('service_text2')){ ?>
+									<p>
+										<?php echo ale_get_meta('service_text2') ?>
+									</p>
+								<?php } ?>
+							</div>
 
-                        <div class="dynamic-text" style="display: none">
-                            <div class="h2"><?php _e('About','aletheme'); ?> <?php echo ale_get_meta('memname3'); ?></div>
-                            <?php ale_filtered_meta('memdesc3'); ?>
-                        </div>
-                    </li>
-                <?php } ?>
-                <?php if(ale_get_meta('memname4')){ ?>
-                    <li>
-                        <div style="background-image: url('<?php echo ale_get_meta('memava4'); ?>');" class="avatar"></div>
-                        <h2><a class="click"><?php echo ale_get_meta('memname4'); ?></a></h2>
-                        <p><?php echo ale_get_meta('memprof4'); ?></p>
+							<div class="serv_item">
+								<?php if(ale_get_meta('service_icon3')){ ?>
+									<div class="icon_box">
+										<img src="<?php echo ale_get_meta('service_icon3') ?>" alt=""/>
+									</div>
+								<?php } ?>
+								<?php if(ale_get_meta('service_text3')){ ?>
+									<p>
+										<?php echo ale_get_meta('service_text3') ?>
+									</p>
+								<?php } ?>
+							</div>
 
-                        <ul class="social">
-                            <?php if(ale_get_meta('memfb4')){ ?><li class="facebook"><a href="<?php echo ale_get_meta('memfb4'); ?>" ></a></li><?php } ?>
-                            <?php if(ale_get_meta('memtw4')){ ?><li class="twitter"><a href="<?php echo ale_get_meta('memtw4'); ?>" ></a></li><?php } ?>
-                            <?php if(ale_get_meta('memem4')){ ?><li class="mail"><a href="mainlto:<?php echo ale_get_meta('memem4'); ?>" ></a></li><?php } ?>
-                        </ul>
+							<div class="serv_item">
+								<?php if(ale_get_meta('service_icon4')){ ?>
+									<div class="icon_box">
+										<img src="<?php echo ale_get_meta('service_icon4') ?>" alt=""/>
+									</div>
+								<?php } ?>
+								<?php if(ale_get_meta('service_text4')){ ?>
+									<p>
+										<?php echo ale_get_meta('service_text4') ?>
+									</p>
+								<?php } ?>
+							</div>
+						</div>
+					</div>
+				</section>
+			<?php } ?>
 
-                        <div class="dynamic-text" style="display: none">
-                            <div class="h2"><?php _e('About','aletheme'); ?> <?php echo ale_get_meta('memname4'); ?></div>
-                            <?php ale_filtered_meta('memdesc4'); ?>
-                        </div>
-                    </li>
-                <?php } ?>
-            </ul>
-        </div>
+			<?php if(ale_get_meta('people_display') == 'show'){?>
+				<section class="our_people" >
+					<div class="bg_people_mask" <?php if(ale_get_meta('people_bg')){ echo 'style="background-image:url('.ale_get_meta('people_bg').');"'; } ?>></div>
+					<div class="wrapper">
+						<div class="top_titles">
+							<div class="left_arrow">
+								<span class="left">
+									<i class="fa fa-angle-left" aria-hidden="true"></i>
+								</span>
+							</div>
+							<div class="center_info">
+								<?php if(ale_get_meta('people_title')){ ?><h3 class="people_title"><?php echo ale_get_meta('people_title'); ?></h3><?php } ?>
+								<?php if(ale_get_meta('people_text')){ ?><span class="people_desc"><?php echo ale_get_meta('people_text'); ?></span><?php } ?>
+							</div>
+							<div class="right_arrow">
+								<span class="right">
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+								</span>
+							</div>
+						</div>
+						<div class="peoples_list">
 
-        <div class="content-right">
-            <!-- BY DEFAULT HERE ELENE MARLENE -->
-            <div class="text">
-                <div class="h2"><?php the_title(); ?></div>
-                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                    <?php the_content(); ?>
-                <?php endwhile; endif; ?>
-            </div>
-        </div>
-    </div>
+							<?php
+
+							$args = array(
+								'post_type' => 'people',
+								'posts_per_page' => -1
+							);
+
+							$our_people = new WP_Query($args);
+
+							if ($our_people->have_posts()) : while ($our_people->have_posts()) : $our_people->the_post(); ?>
+
+								<div class="item_people">
+									<div class="mask_hover">
+										<div class="image_people">
+											<?php echo get_the_post_thumbnail($post->ID, 'people-user'); ?>
+										</div>
+										<div class="people_info">
+											<h4 class="name"><?php the_title(); ?></h4>
+											<?php if(ale_get_meta('people_post')){ ?>
+												<span class="post"><?php echo ale_get_meta('people_post') ?></span>
+											<?php } ?>
+										</div>
+									</div>
+								</div>
+
+							<?php endwhile;  endif;?>
+
+
+						</div>
+					</div>
+				</section>
+			<?php } ?>
+
+		</div>
+
+	<?php endwhile; endif; ?>
+</div>
 <?php get_footer(); ?>

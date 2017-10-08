@@ -395,6 +395,175 @@ function aletheme_metaboxes($meta_boxes) {
 
 
 
+    $meta_boxes[] = array(
+        'id'         => 'people_pages_metabox',
+        'title'      => 'People Options',
+        'pages'      => array( 'people', ), // Post type
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'show_names' => true, // Show field names on the left
+        //'show_on'    => array( 'key' => 'page-template', 'value' => array('template-contact.php'), ), // Specific post templates to display this metabox
+
+        'fields' => array(
+
+            array(
+                'name' => __('Team Position','aletheme'),
+                'desc' => 'Type here the position',
+                'id'   => $prefix . 'people_post',
+                'type' => 'text',
+            ),
+        )
+    );
+
+
+
+
+    $meta_boxes[] = array(
+        'id'         => 'about_page_metabox',
+        'title'      => 'About Options',
+        'pages'      => array( 'page', ), // Post type
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'show_names' => true, // Show field names on the left
+        'show_on'    => array( 'key' => 'page-template', 'value' => array('template-about.php'), ), // Specific post templates to display this metabox
+
+        'fields' => array(
+            array(
+                'name' => __('Show Info Box','aletheme'),
+                'desc' => 'Select to show the infobox',
+                'id'   => $prefix . 'info_display',
+                'type' => 'select',
+                'options' => array(
+                    array('name'=>'Show Block','value'=>'show'),
+                    array('name'=>'Hide Block','value'=>'hide'),
+
+                )
+            ),
+            array(
+                'name' => __('Show Services Box','aletheme'),
+                'desc' => 'Select to show the infobox',
+                'id'   => $prefix . 'services_display',
+                'type' => 'select',
+                'options' => array(
+                    array('name'=>'Show Block','value'=>'show'),
+                    array('name'=>'Hide Block','value'=>'hide'),
+
+                )
+            ),
+            array(
+                'name' => __('Show People Box','aletheme'),
+                'desc' => 'Select to show the infobox',
+                'id'   => $prefix . 'people_display',
+                'type' => 'select',
+                'options' => array(
+                    array('name'=>'Show Block','value'=>'show'),
+                    array('name'=>'Hide Block','value'=>'hide'),
+
+                )
+            ),
+            array(
+                'name' => __('Title for Info Section','aletheme'),
+                'desc' => 'Insert the title',
+                'id'   => $prefix . 'info_title',
+                'std'   =>'The generated Lorem Ipsum is therefore always free from',
+                'type' => 'text',
+            ),
+            array(
+                'name' => __('Description for Info Section','aletheme'),
+                'desc' => 'Insert the text',
+                'id'   => $prefix . 'info_text',
+                'std'   =>'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, ',
+                'type' => 'textarea_code',
+            ),
+            array(
+                'name' => __('BG Image for Info Section','aletheme'),
+                'desc' => 'Upload or select an image',
+                'id'   => $prefix . 'info_bg',
+                'std'   =>'',
+                'type' => 'file',
+            ),
+
+            array(
+                'name' => __('Service Icon 1','aletheme'),
+                'desc' => 'Upload or select an image',
+                'id'   => $prefix . 'service_icon1',
+                'std'   => get_template_directory_uri().'/css/img/i1.png',
+                'type' => 'file',
+            ),
+            array(
+                'name' => __('Service Text 1','aletheme'),
+                'desc' => 'Insert the text',
+                'id'   => $prefix . 'service_text1',
+                'std'   =>'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type',
+                'type' => 'textarea_code',
+            ),
+            array(
+                'name' => __('Service Icon 2','aletheme'),
+                'desc' => 'Upload or select an image',
+                'id'   => $prefix . 'service_icon2',
+                'std'   => get_template_directory_uri().'/css/img/i2.png',
+                'type' => 'file',
+            ),
+            array(
+                'name' => __('Service Text 2','aletheme'),
+                'desc' => 'Insert the text',
+                'id'   => $prefix . 'service_text2',
+                'std'   =>'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+                'type' => 'textarea_code',
+            ),
+            array(
+                'name' => __('Service Icon 3','aletheme'),
+                'desc' => 'Upload or select an image',
+                'id'   => $prefix . 'service_icon3',
+                'std'   => '/css/img/i3.png',
+                'type' => 'file',
+            ),
+            array(
+                'name' => __('Service Text 3','aletheme'),
+                'desc' => 'Insert the text',
+                'id'   => $prefix . 'service_text3',
+                'std'   =>'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged',
+                'type' => 'textarea_code',
+            ),
+            array(
+                'name' => __('Service Icon 4','aletheme'),
+                'desc' => 'Upload or select an image',
+                'id'   => $prefix . 'service_icon4',
+                'std'   => get_template_directory_uri().'/css/img/i4.png',
+                'type' => 'file',
+            ),
+            array(
+                'name' => __('Service Text 4','aletheme'),
+                'desc' => 'Insert the text',
+                'id'   => $prefix . 'service_text4',
+                'std'   =>'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing',
+                'type' => 'textarea_code',
+            ),
+
+
+            array(
+                'name' => __('Title for Our People','aletheme'),
+                'desc' => 'Insert the title',
+                'id'   => $prefix . 'people_title',
+                'std'   =>'Our people',
+                'type' => 'text',
+            ),
+            array(
+                'name' => __('Description for Our People','aletheme'),
+                'desc' => 'Insert the text',
+                'id'   => $prefix . 'people_text',
+                'std'   =>'Lorem Ipsum is simply dummy tex',
+                'type' => 'text',
+            ),
+            array(
+                'name' => __('BG Image for Our People','aletheme'),
+                'desc' => 'Upload or select an image',
+                'id'   => $prefix . 'people_bg',
+                'std'   =>'',
+                'type' => 'file',
+            ),
+        )
+    );
 
 
 
@@ -429,6 +598,16 @@ function aletheme_get_images_sizes() {
                 'crop'      => true,
             ),
         ),
+
+
+        'people' => array(
+            array(
+                'name'      => 'people-user',
+                'width'     => 87,
+                'height'    => 87,
+                'crop'      => true,
+            ),
+        ),
     );
 }
 
@@ -458,6 +637,38 @@ function aletheme_get_post_types() {
             'columns'    => array(
                 'first_image',
             )
+        ),
+        'events' => array(
+            'config' => array(
+                'public' => true,
+                'menu_position' => 20,
+                'has_archive'   => true,
+                'supports'=> array(
+                    'title',
+                    'editor',
+                    'excerpt',
+                    'comments'
+                ),
+                'show_in_nav_menus'=> true,
+            ),
+            'singular' => 'Event',
+            'multiple' => 'Events',
+        ),
+        'people' => array(
+            'config' => array(
+                'public' => true,
+                'menu_position' => 20,
+                'has_archive'   => true,
+                'supports'=> array(
+                    'title',
+                    'editor',
+                    'thumbnail',
+                    'excerpt'
+                ),
+                'show_in_nav_menus'=> true,
+            ),
+            'singular' => 'People',
+            'multiple' => 'People',
         ),
         'services' => array(
             'config' => array(
@@ -495,6 +706,18 @@ function aletheme_get_taxonomies() {
             ),
             'singular'    => 'Gallery Category',
             'multiple'    => 'Gallery Categories',
+        ),
+
+
+        'events-category'    => array(
+            'for'        => array('events'),
+            'config'    => array(
+                'sort'        => true,
+                'args'        => array('orderby' => 'term_order'),
+                'hierarchical' => true,
+            ),
+            'singular'    => 'Event Category',
+            'multiple'    => 'Event Categories',
         ),
 
 
